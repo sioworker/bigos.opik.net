@@ -1,10 +1,14 @@
-all: css js
+all: css wasm
 
 css:
 	tailwindcss -i tailwind.css -o style.css --minify
 
-js:
-	tsc -p .
-	esbuild main.ts --minify --target=es2022 --outfile=main.js
+wasm:
+	cargo build -q --release --target wasm32-unknown-unknown
+	wasm-bindgen --target web --no-typescript --out-dir pkg target/wasm32-unknown-unknown/release/bigos.wasm
+	esbuild pkg/bigos.js --minify --format=esm --allow-overwrite --outfile=pkg/bigos.js --log-level=warning
 
-.PHONY: all css js
+serve:
+	python3 -m http.server -b 127.0.0.1 8099
+
+.PHONY: all css wasm serve
