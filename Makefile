@@ -8,7 +8,10 @@ wasm:
 	wasm-bindgen --target web --no-typescript --out-dir pkg target/wasm32-unknown-unknown/release/bigos.wasm
 	esbuild pkg/bigos.js --minify --format=esm --allow-overwrite --outfile=pkg/bigos.js --log-level=warning
 
-serve:
-	python3 -m http.server -b 127.0.0.1 8099
+site: all
+	rm -rf _site && mkdir _site && cp -r index.html 404.html init.js style.css favicon.svg me.jpg CNAME pkg _site/
 
-.PHONY: all css wasm serve
+serve: site
+	cd _site && python3 -m http.server -b 127.0.0.1 8099
+
+.PHONY: all css wasm site serve

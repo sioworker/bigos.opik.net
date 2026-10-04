@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; connect-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+	<title>404 - sioworker</title>
+	<link rel="stylesheet" href="/style.css">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body class="bg-[#fafaf7] text-[#1d1d1b] dark:bg-[#1e1f22] dark:text-[#e4e4df] font-mono text-[15px] leading-relaxed">
+<main class="max-w-[680px] mx-auto px-4 pt-14 pb-18">
+	<h1 class="text-[22px] font-bold mb-1 break-all"><span class="text-acc dark:text-acc-d">$</span> <span id="cmd" data-page>this-page</span><span id="cur" class="hidden animate-pulse font-normal">▋</span></h1>
+	<p id="line" class="hidden"><span id="spin" class="text-neutral-500 dark:text-neutral-400 font-normal no-underline">/</span></p>
+	<div id="out">
+	<p class="text-neutral-500 dark:text-neutral-400 mb-10 break-all"><span data-page>this-page</span>: No such file or directory</p>
+	<p><span class="text-acc dark:text-acc-d">$</span> <a class="text-acc dark:text-acc-d hover:underline" href="/">cd ~</a></p>
+	</div>
+</main>
+<script type="module" src="/init.js"></script>
+</body>
+</html>

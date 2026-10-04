@@ -3,36 +3,46 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; connect-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 	<title>sioworker</title>
 	<meta name="description" content="sioworker - everything is nicer from a terminal">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://bigos.opik.net/">
+	<meta property="og:title" content="sioworker">
+	<meta property="og:description" content="i think that everything is nicer to use from a terminal.">
+	<meta property="og:image" content="https://bigos.opik.net/me.jpg">
+	<meta name="twitter:card" content="summary">
+	<meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#1e1f22" media="(prefers-color-scheme: dark)">
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body class="bg-[#fafaf7] text-[#1d1d1b] dark:bg-[#1e1f22] dark:text-[#e4e4df] font-mono text-[15px] leading-relaxed">
 <main class="max-w-[680px] mx-auto px-4 pt-14 pb-18">
 	<h1 class="text-[22px] font-bold mb-1"><span class="text-acc dark:text-acc-d">$</span> <span id="cmd">whoami</span><span id="cur" class="hidden animate-pulse font-normal">▋</span></h1>
 	<p id="line" class="hidden"><span id="spin" class="text-neutral-500 dark:text-neutral-400 font-normal no-underline">/</span></p>
 	<div id="out">
-	<p class="text-neutral-500 dark:text-neutral-400 mb-10">sioworker. i think that everything is nicer to use from a terminal.</p>
+	<p class="text-neutral-500 dark:text-neutral-400 mb-10"><b class="font-bold text-yellow-600 dark:text-yellow-400">Sioworker</b>. i think that everything is nicer to use from a terminal.</p>
 
 	<h2 class="text-[13px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold mt-9 mb-2.5">projects</h2>
 	<ul class="border-b border-neutral-200 dark:border-neutral-700/60">
-		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/sio-cli">sio-cli</a><span class="text-neutral-500 dark:text-neutral-400">submit solutions, list contests, problems and submissions on oioioi</span></li>
-		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/swiss-esp">swiss-esp</a><span class="text-neutral-500 dark:text-neutral-400">"rewriting" hx4c/keytooth, with more features and modules</span></li>
-		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/talentnix">talentnix</a><span class="text-neutral-500 dark:text-neutral-400">fixing stuff for talent</span></li>
-		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/dotfiles">dotfiles</a><span class="text-neutral-500 dark:text-neutral-400">self-explanatory</span></li>
+		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/sio-cli" target="_blank" rel="noopener noreferrer">sio-cli</a><span class="text-neutral-500 dark:text-neutral-400">submit solutions, list contests, problems and submissions on oioioi</span></li>
+		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/swiss-esp" target="_blank" rel="noopener noreferrer">swiss-esp</a><span class="text-neutral-500 dark:text-neutral-400">"rewriting" hx4c/keytooth, with more features and modules</span></li>
+		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/talentnix" target="_blank" rel="noopener noreferrer">talentnix</a><span class="text-neutral-500 dark:text-neutral-400">fixing stuff for talent</span></li>
+		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60"><a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker/dotfiles" target="_blank" rel="noopener noreferrer">dotfiles</a><span class="text-neutral-500 dark:text-neutral-400">self-explanatory</span></li>
 	</ul>
 
 	<h2 class="text-[13px] uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold mt-9 mb-2.5">contact</h2>
 	<ul class="border-b border-neutral-200 dark:border-neutral-700/60">
-		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60">mail<span class="text-neutral-500 dark:text-neutral-400">[WIP] me@bigos.opik.net</span></li>
+		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60">mail<span class="text-neutral-500 dark:text-neutral-400"><b class="font-bold text-purple-600 dark:text-purple-400">[WIP]</b> me@bigos.opik.net</span></li>
 		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60">discord<span class="text-neutral-500 dark:text-neutral-400">sioworker</span></li>
-		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60">github<a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker">github.com/sioworker</a></li>
-		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60">gitea<a class="text-acc dark:text-acc-d hover:underline" href="https://gitea.com/sioworker">gitea.com/sioworker</a></li>
+		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60">github<a class="text-acc dark:text-acc-d hover:underline" href="https://github.com/sioworker" target="_blank" rel="noopener noreferrer">github.com/sioworker</a></li>
+		<li class="grid sm:grid-cols-[130px_1fr] sm:gap-4 py-2 border-t border-neutral-200 dark:border-neutral-700/60">gitea<a class="text-acc dark:text-acc-d hover:underline" href="https://gitea.com/sioworker" target="_blank" rel="noopener noreferrer">gitea.com/sioworker</a></li>
 	</ul>
 
 	<footer class="mt-12 text-[13px] text-neutral-500 dark:text-neutral-400">bigos.opik.net</footer>
 	</div>
 </main>
-<script type="module">import init from "./pkg/bigos.js"; init()</script>
+<script type="module" src="/init.js"></script>
 </body>
 </html>

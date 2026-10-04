@@ -1,1 +1,4 @@
 target/
+pkg/
+_site/
+style.css
