@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@theme {
+	--font-mono: ui-monospace, "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
+	--color-acc: #4b57d6;
+	--color-acc-d: #8a94ff;
+}
